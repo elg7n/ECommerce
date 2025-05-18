@@ -1,4 +1,4 @@
-﻿using ECommerce.Application.DTOs;
+﻿using ECommerce.Application.DTOs.Category;
 using ECommerce.Application.Services.Implementation;
 
 namespace ECommerce.ConsoleUI

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ECommerce.Application.DTOs
+namespace ECommerce.Application.DTOs.Category
 {
     public class CategoryAllDto
     {

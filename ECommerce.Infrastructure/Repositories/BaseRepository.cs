@@ -7,18 +7,20 @@ namespace ECommerce.Infrastructure.Repositories
     public class BaseRepository<TEntity> : IRepository<TEntity> where TEntity : class
     {
         protected readonly AppDbContext DbContext;
-        protected readonly DbSet<TEntity> Table;
+        public readonly DbSet<TEntity> Table;
         public BaseRepository()
         {
             DbContext = new AppDbContext();
             Table = DbContext.Set<TEntity>();
         }
 
-        public void Add(TEntity entity)
+        public TEntity Add(TEntity entity)
         {
-            Table.Add(entity);
+            var addedEntity = Table.Add(entity);
 
             DbContext.SaveChanges();
+
+            return addedEntity.Entity;
         }
 
         public void Delete(int id)

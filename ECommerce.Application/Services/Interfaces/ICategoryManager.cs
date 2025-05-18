@@ -1,4 +1,4 @@
-﻿using ECommerce.Application.DTOs;
+﻿using ECommerce.Application.DTOs.Category;
 using ECommerce.Domain.Entities;
 
 namespace ECommerce.Application.Services.Interfaces
@@ -8,5 +8,8 @@ namespace ECommerce.Application.Services.Interfaces
         void Add(CategoryCreateDto categoryCreateDto);
         List<CategoryAllDto> GetAll();
         Category? GetById(int categoryId);
+
+        void Update(CategoryUpdateDto categoryUpdateDto);
+        void Delete(int id);
     }
 }
